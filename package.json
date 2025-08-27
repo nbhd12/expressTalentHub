@@ -1,0 +1,30 @@
+{
+  "name": "cours-26---express-en-solo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx index.ts",
+    "dev": "tsx watch index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:js": "rollup -c",
+    "watch:css": "sass --watch src/scss/:public/css/",
+    "build:css": "sass src/scss/:public/css/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@rollup/plugin-typescript": "^12.1.4",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "rollup": "^4.48.1",
+    "sass": "^1.89.2",
+    "tslib": "^2.8.1",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3"
+  }
+}
