@@ -4,14 +4,33 @@
 <div class="text">
     <h1>Trouvez la mission qui vous correspond!</h1>
     <p class="text-para">Découvrez des annonces claires, accessibles et adaptées à vos talents. <br> Publiez, éditez ou supprimez vos offres en toute simplicité.</p>
-    <button type="button" class="btn"> Decouvrez les offres</button>
+    <button type="button" class="btn" onclick="window.location.href='/jobs'"> Decouvrez les offres</button>
 </div>    
 </div>
 
 
 <h1 class="annonces">Les derniers annonces</h1>
 
+<div class="job-grid">    
+     <% jobshome.forEach(job => { %>
+    <div class="job-card">
+        <h4><%= job.jobname %></h4>
+        <p ><%= job.jobdesc %></p><br>
+        <div class="tags">
+             <div class=tag1>Typescript</div>
+             <div class="tag2">React</div>
+             <div class="tag3">API Rest</div>
+        </div>     
+      </div> 
+    <% }) %>    
+</div>
 
+
+<div class="btna">
+<a  href="/jobs">Voir toutes les offres</a>
+</div>
+
+<br>
 
 
 <%- include("../partials/footer") %>

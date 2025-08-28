@@ -24,25 +24,80 @@
 
 h1 {
   color: #243546;
-}
-
-.annonces {
-  margin: 5%;
+  margin: 25px;
 }
 
 .text-para {
-  color: #E9F4E0;
+  color: #156296;
   font-weight: 600;
 }
 
 .btn {
   width: 220px;
-  background-color: #156296;
+  background-color: #E9F4E0;
   border: none;
   border-radius: 5px;
   padding: 5px 10px 5px 10px;
   font-size: 16px;
+  font-weight: 700;
+  color: #243546;
+  cursor: pointer;
+}
+
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 0px 20px;
+}
+
+.job-card {
+  display: block;
+  padding: 1rem;
+  background-color: #eef4e9;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #222;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.job-card:hover {
+  background-color: #f9f9f9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.tag1, .tag2, .tag3 {
+  background-color: #243546;
+  border-radius: 13px;
+  padding: 4px 10px;
   color: #E9F4E0;
+}
+
+.btna {
+  background-color: #243546;
+  width: 200px;
+  height: 38px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  color: #E9F4E0;
+  margin-left: 25px;
+  margin-top: 40px;
+}
+
+a {
+  color: #E9F4E0;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=home.css.map */

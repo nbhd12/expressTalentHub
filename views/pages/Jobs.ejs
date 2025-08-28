@@ -1,0 +1,16 @@
+<%- include("../partials/head", { title: "Accueil Talent Hub" }) %>
+
+<h3 class="book-grid-title">6 missions disponibles</h3>
+<ul>
+  <% jobs.forEach((job) => { %>
+    <li>
+      <h2><%= job.title %></h2>
+      <p><%= job.description %></p>
+      <p><%= job.skills %></p>
+      <p></p>
+      <a href="/jobs/<%= job.id %>">Voir plus</a>
+    </li>
+  <% }) %>
+</ul>
+
+<%- include("../partials/footer") %>

@@ -1,0 +1,37 @@
+h3 {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 0px 20px;
+}
+
+.job-card {
+  display: block;
+  padding: 1rem;
+  background-color: #eef4e9;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #222;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.job-card:hover {
+  background-color: #f9f9f9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/*# sourceMappingURL=jobs.css.map */
