@@ -1,5 +1,4 @@
 import { Controller } from "../libs/controller";
-import { jobs } from "./data";
 import { descriptions } from "./data";
 
 export class JobController extends Controller {
@@ -22,14 +21,21 @@ export class JobController extends Controller {
     });
   }
 
+
   public readJob() {
   
-  const requestedId = parseInt(this.request.params.id);
-  const job = descriptions.find((d) => d.id === requestedId);
+  const requestedId = this.request.params.id;
+  const job = descriptions.find((description) => {
+      return description.id == parseInt(requestedId);
+    });
 
   if (!job) {
     this.response.send("The job posting does not exist");
-  } else {
+  } 
+  
+  
+
+  else {
     this.response.render("pages/job.ejs", { job });
   }
 }
@@ -45,16 +51,16 @@ export class JobController extends Controller {
   }
 
   // Affiche rien, on traîte la soumission du formulaire d'ajout d'un livre
-  public addJob() {
-    const newJob = {
-      id: jobs.length + 1,
-      title: this.request.body.title,
-    };
+  // public addJob() {
+  //   const newJob = {
+  //     id: jobs.length + 1,
+  //     title: this.request.body.title,
+  //   };
 
-    jobs.push(newJob);
+  //   jobs.push(newJob);
 
-    this.response.redirect("/books?success=true"); // did not understand this NUPUR
-  }
+  //   this.response.redirect("/books?success=true"); // did not understand this NUPUR
+  // }
 
   public deleteJob() {
     this.response.send("Bienvenue sur la suppression d'un livre");

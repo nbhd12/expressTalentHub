@@ -61,12 +61,12 @@
 }
 
 .nav-item a:hover {
-  background-color: #f3f4f6;
-  color: #333;
+  background-color: #E9F4E0;
+  color: #156296;
 }
 
 .nav-item.cta a {
-  background-color: #2f313a;
+  background-color: #243546;
   color: white;
 }
 

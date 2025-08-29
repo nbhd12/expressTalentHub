@@ -1,0 +1,70 @@
+.descript {
+  margin-left: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-tag {
+  display: inline-block;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 5px 12px;
+  font-size: 14px;
+  background-color: #156296;
+  border-radius: 13px;
+  color: #E9f4e0;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.detail-tag {
+  display: inline-block;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 5px 12px;
+  margin: 2px;
+  font-size: 16px;
+  background-color: #E9f4e0;
+  border-radius: 3px;
+  color: #156296;
+  font-weight: 800;
+}
+
+.buttons {
+  text-align: right;
+  margin-right: 80px;
+}
+
+.EDlink {
+  background-color: #243546;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.buttons :hover {
+  background-color: #156296;
+}
+
+@media (max-width: 768px) {
+  .descript {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .buttons {
+    margin-right: 5px;
+  }
+}
+
+/*# sourceMappingURL=jobdetail.css.map */

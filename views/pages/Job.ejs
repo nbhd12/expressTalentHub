@@ -1,0 +1,32 @@
+<%- include("../partials/head", { title: "Accueil Talent Hub" }) %>
+
+<br>
+<br>
+
+
+<div class ="descript">
+
+    <div class="buttons">
+    <a class="EDlink" href="/jobs">Editer</a>
+    <a class="EDlink" href="/jobs">Supprimer</a>     
+    
+    </div>
+    <h2><%= job.title %></h2>
+    <div class="skills">
+        <% job.skills.forEach((skill) => { %>
+          <div class="skill-tag"><%= skill %></div>
+        <% }) %>
+    </div>
+
+<div class="details">
+<p class="detail-tag"> Type: <%= job.type %></p>
+<p class="detail-tag"> Rémunération: <%= job.salary %> <%= job.salary_unit %></p>
+<p class="detail-tag">Start Date: <%= job.start_date %></p>
+</div>
+
+<p><%= job.description %></p>
+
+
+</div>
+
+<%- include("../partials/footer") %>

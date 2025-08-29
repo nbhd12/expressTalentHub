@@ -17,10 +17,10 @@ jobRouter.get("/add", (request, response) => {
 });
 
 // Add POST - traiter le formulaire
-jobRouter.post("/", (request, response) => {
-  const controller = new JobController(request, response);
-  controller.addJob();
-});
+// jobRouter.post("/", (request, response) => {
+//   const controller = new JobController(request, response);
+//   controller.addJob();
+// });
 
 // Read
 jobRouter.get("/:id", (request, response) => {
