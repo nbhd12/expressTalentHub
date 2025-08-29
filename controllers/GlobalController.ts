@@ -35,7 +35,7 @@ export class GlobalsController extends Controller {
     });
 
     if (!job) {
-      this.response.send(`This posting does not exist`);
+      this.response.render("pages/JobCreatePage.ejs");
     }
 
     this.response.render("pages/job.ejs", {

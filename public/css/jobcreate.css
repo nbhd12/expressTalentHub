@@ -1,0 +1,32 @@
+h2 {
+  color: #243546;
+  margin-left: 120px;
+}
+
+.EDlink {
+  background-color: #243546;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.job-create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 800px;
+  margin: 0px 120px;
+}
+
+fieldset {
+  border: none;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/*# sourceMappingURL=jobcreate.css.map */

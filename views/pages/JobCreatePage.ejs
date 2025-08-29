@@ -1,0 +1,112 @@
+<%- include("../partials/head", { title: "Accueil Talent Hub" }) %>
+
+
+<main>
+    <br>
+    <div class="buttons">
+    
+    <a class="EDlink" href="/jobs">Annuler</a>     
+    
+    </div>
+  <h2>Creation d'une annonce</h2>
+
+  <form action="/jobs" method="post" class="job-create-form">
+
+    <fieldset>
+    <div>    
+    <label for="title" class="formulaire">Titre de l'annonce</label>
+    <input id="title" type="text" name="title" placeholder="Recherche talent junior" class="formulaire" />
+    </div>
+
+    <br>
+
+    <div>
+    <label for="description" class="formulaire">Description de l'offre</label>
+    <textarea id="description" name="description" rows="3" cols="23" placeholder="Ajoyer le description pour l'offre ici.."></textarea>
+    </div>
+
+    <br>
+
+    <label for="competences" class="formulaire">Compétence(s) recherchée(s)</label>
+    <div class="checkbox-items">
+    
+    <input type="checkbox" id="competence-react-native" name="competences[]" value="React Native" />
+    <label for="competence-react-native">React Native</label>
+    
+    <input type="checkbox" id="competence-javascript" name="competences[]" value="JavaScript" />
+    <label for="competence-javascript">JavaScript</label>
+    
+    <input type="checkbox" id="competence-api-rest" name="competences[]" value="API REST" />
+    <label for="competence-api-rest">API REST</label>
+
+    <input type="checkbox" id="competence-firebase" name="competences[]" value="Firebase" />
+    <label for="competence-firebase">Firebase</label>
+
+    <input type="checkbox" id="competence-cybersecurite" name="competences[]" value="Cybersécurité" />
+    <label for="competence-cybersecurite">Cybersécurité</label>
+
+    <input type="checkbox" id="competence-pentesting" name="competences[]" value="Pentesting" />
+    <label for="competence-pentesting">Pentesting</label>
+
+    <input type="checkbox" id="competence-owasp" name="competences[]" value="OWASP" />
+    <label for="competence-owasp">OWASP</label>
+
+    <input type="checkbox" id="competence-linux" name="competences[]" value="Linux" />
+    <label for="competence-linux">Linux</label>
+
+    <input type="checkbox" id="competence-infrastructure" name="competences[]" value="Infrastructure" />
+    <label for="competence-infrastructure">Infrastructure</label>
+
+    </div>
+    </fieldset>
+
+    <fieldset>
+    <label for="type_mission">Type de mission</label>
+    <select id="type_mission" name="type_mission" required style="width: 250px;">
+    <option value="" disabled selected>Choisissez une option</option>
+    <option value="CDI">CDI</option>
+    <option value="CDD">CDD</option>
+    <option value="Interim">Intérim</option>
+    <option value="Freelance">Freelance</option>
+    </select>
+
+
+    
+    <div>
+      <label for="date_onboarding">Date onboarding</label>
+      <input type="date" id="date_onboarding" name="date_onboarding" placeholder="jj/mm/aaaa">
+    </div>
+
+    <div>
+      <label for="salaire">Salaire</label>
+      <input type="number" id="salaire" name="salaire" placeholder="... €">
+    </div>
+
+    <div>
+      <label for="unite_salaire">Unité de salaire</label>
+      <select id="unite_salaire" name="unite_salaire">
+        <option value="">Brut annuel</option>
+        <option value="Brut mensuel"> Brut mensuel </option>
+        <option value="Brut horaire"> Brut horaire </option>
+        <option value="Net horaire"> Net horaire </option>
+        <option value="Net annuel"> Net annuel </option>
+        
+      </select>
+    </div>
+    </fieldset>
+
+    <fieldset>
+    <label for="mot_de_passe">Mot de passe</label>
+    <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+    <p>
+      Un mot de passe est nécessaire pour administrer l'annonce une fois publiée.<br>
+      Assurez-vous de le conserver précieusement.
+    </p>
+  </fieldset>
+  
+  <button type="submit" class="EDlink">Creer l'annonce</button>
+  </form>
+</main>
+
+
+    <%- include("../partials/footer") %>
