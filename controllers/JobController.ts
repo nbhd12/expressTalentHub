@@ -1,5 +1,7 @@
 import { Controller } from "../libs/controller";
 import { descriptions } from "./data";
+import { jobTypes, skills } from "../libs/constants";
+import { JobSchema } from "../libs/JobSchema";
 
 export class JobController extends Controller {
   public browseJobs() {
@@ -33,8 +35,6 @@ export class JobController extends Controller {
     this.response.send("The job posting does not exist");
   } 
   
-  
-
   else {
     this.response.render("pages/job.ejs", { job });
   }
@@ -45,9 +45,12 @@ export class JobController extends Controller {
     this.response.send("You can edit the job listing here");
   }
 
-  // Afficher le formulaire pour créer un livre (ditribue une vue)
+
   public createJob() {
-    this.response.render("pages/JobCreatePage.ejs");
+    this.response.render("pages/JobCreatePage.ejs", {
+      skills, jobTypes
+    });
+    console.log("skills:", skills);
   }
 
   // Affiche rien, on traîte la soumission du formulaire d'ajout d'un livre
@@ -61,6 +64,36 @@ export class JobController extends Controller {
 
   //   this.response.redirect("/books?success=true"); // did not understand this NUPUR
   // }
+  public addJob() {
+   const newJob = {
+    id: descriptions.length + 1,  
+    title: this.request.body.title,
+    description: this.request.body.description,
+    skills: this.request.body.competences,
+    type: this.request.body.type_mission,
+    start_date: this.request.body.date_onboarding,
+    salary: this.request.body.salaire,
+    salary_unit: this.request.body.unite_salaire,
+    password: this.request.body.mot_de_passe
+  };
+
+  descriptions.push(newJob);  
+
+  this.response.redirect("/jobs?success=true");
+}
+    // Create new job
+  //   dataVariables.id++;
+  //   const newJobOffer = { id: dataVariables.id, ...result.data };
+  //   jobOffers.push(newJobOffer);
+
+  //   // Redirect with success
+  //   this.response.redirect("/jobs?success=true");
+  // }
+
+ 
+
+
+
 
   public deleteJob() {
     this.response.send("Bienvenue sur la suppression d'un livre");

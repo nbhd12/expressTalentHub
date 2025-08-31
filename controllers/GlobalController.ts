@@ -1,5 +1,6 @@
 import { Controller } from "../libs/controller";
 import { descriptions } from "./data";
+import {skills, jobTypes } from "../libs/constants"
 
 // const jobshome = [
 //   { id: 1, 
@@ -35,7 +36,7 @@ export class GlobalsController extends Controller {
     });
 
     if (!job) {
-      this.response.render("pages/JobCreatePage.ejs");
+      this.response.render("pages/JobCreatePage.ejs", {jobTypes});
     }
 
     this.response.render("pages/job.ejs", {
