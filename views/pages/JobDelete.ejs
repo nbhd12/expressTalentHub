@@ -1,0 +1,19 @@
+<%- include("../partials/head", { title: "Accueil Talent Hub" }) %>
+
+<main>
+  <h2>Supprimer l'annonce : <%= job.title %></h2>
+  
+  <form action="/jobs/delete/<%= job.id %>" method="POST">
+    <label for="password">Mot de passe pour confirmer la suppression :</label>
+    <input type="password" name="password" id="password" required />
+
+    <button type="submit" class="EDlink">Supprimer l'annonce</button>
+  </form>
+
+  <a href="/jobs">Annuler</a>
+</main>
+
+
+
+
+<%- include("../partials/footer") %>
