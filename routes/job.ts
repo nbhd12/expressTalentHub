@@ -34,10 +34,18 @@ jobRouter.put("/:id", (request, response) => {
   controller.editJob();
 });
 
+
 // Delete
-jobRouter.delete("/:id", (request, response) => {
+jobRouter.post("delete/:id", (request,response) =>{
   const controller = new JobController(request, response);
   controller.deleteJob();
 });
+
+
+// // Delete
+// jobRouter.delete("/:id", (request, response) => {
+//   const controller = new JobController(request, response);
+//   controller.deleteJob();
+// });
 
 export default jobRouter;

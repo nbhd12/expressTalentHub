@@ -96,6 +96,27 @@ export class JobController extends Controller {
 
 
   public deleteJob() {
+//   const { id } = this.request.params;
+//   const { password } = this.request.body;
+
+//   const job = jobs.find((j) => j.id === Number(id));
+
+//   if (!job) {
+//     return this.response.status(404).send("Job non trouvé");
+//   }
+
+//   if (job.password !== password) {
+//     return this.response.status(401).send("Mot de passe incorrect");
+//   }
+
+//   // remove job
+//   jobs = jobs.filter((j) => j.id !== job.id);
+
+//   return this.response.redirect("/jobs");
+// }
+
+
+
     this.response.send("Bienvenue sur la suppression d'un livre");
   }
 }

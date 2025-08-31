@@ -67,3 +67,51 @@ input{
     border-radius: 3px;
     border: 1px solid #8097ae;
 }
+
+
+@media (max-width: 768px) {
+  h2 {
+    margin-left: 0; 
+    text-align: center;
+  }
+
+  .job-create-form {
+    width: 95%;  
+    gap: 15px;
+    font-size: 16px; 
+  }
+
+  .form-row {
+    grid-template-columns: 1fr; 
+    gap: 1rem;
+  }
+
+  .checkbox-items {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .checkbox-items label {
+    font-size: 14px;
+  }
+
+  input, select, textarea {
+    width: 100%;  
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  fieldset {
+    padding: 10px;
+  }
+
+  .EDlink, button.EDlink {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+  }
+}
